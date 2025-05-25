@@ -1,7 +1,7 @@
 import socket
 
 
-UDP_IP = "192.168.169.84"  
+UDP_IP = "192.168.169.84"  #receiver ip
 UDP_PORT = 5005
 FILENAME = "merged_packet.pcap"
 
