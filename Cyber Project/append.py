@@ -52,5 +52,5 @@ Hovering mode on"""
 if __name__ == "__main__":
     merge_commands_with_capture(
         capture_file="/home/kali/Desktop/WIRESHARK/Pocox51.pcapng",
-        output_file="control_signal.pcapng"
+        output_file="merged_packet.pcapng"
     )
