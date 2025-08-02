@@ -1,9 +1,18 @@
-# Cyber_Resilient_Drone
+# Cyber_Resilient_Drone (Simulation)
 By - Rohit Dhyani
+
+## Objects used for simulation
+1. Mobile phone acts as a Remote control for the drone.
+2. Wi-Fi packets from the mobile phone acts as control signals intended for the drone.
+3. First laptop acts as an interceptor, catching the signals in between using Wireshark and hashing the packets.
+4. Second laptop acts as a drone, which receives the hashed signal packet and further itself authenticates the command packet by again hashing and matching these hashed values.
+   
 
 ## Overview
 
-This project provides a framework which provides secure communication between a remote control and a drone using hash-based signal authentication. One mobile phone acts as a remote, sending control signals through Wi-Fi. A laptop captures these signals, appends a secure hash (HMAC) to them, and sends the hashed signal to a second laptop (simulated drone). The receiving system verifies the hash to ensure the signal's authenticity, preventing unauthorized commands from being executed.
+This project provides a framework which provides secure communication between a remote control and a drone using hash-based signal authentication.
+One mobile phone acts as a remote, sending control signals through Wi-Fi. A laptop captures these signals, appends a secure hash (HMAC) to them, and sends the hashed signal to a second laptop (simulated drone). The receiving system verifies the hash to ensure the signal's authenticity, preventing unauthorized commands from being executed.
+Ultimate goal of the project is to maintain integrity of the system.
 
 ## Components
 
