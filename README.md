@@ -7,7 +7,7 @@ This project provides a framework which provides secure communication between a 
 
 ## Components
 
-The project consists of four main Python scripts:
+The project consists of following Python scripts and files:
 
 ---
 
@@ -26,9 +26,27 @@ This file stores the generated hash value from hmac_code.py. It is used by the a
 ### 3. `append.py`
 
 **Description:** 
-This script reads the original control signal and the hash from hash_value.txt, then creates a custom packet by combining both. The merged packet is stored in a new .pcap file ready for transmission.
+This script reads the original control signal and the hash from hash_value.txt, then creates a custom packet by combining both. The merged packet is stored in a new `.pcapng` file ready for transmission.
 
 ### 4. `server_udp.py`
 
 **Description:** 
-This script acts as a UDP server that sends the merged_pcap.pcap file from Laptop 1 (sender) to Laptop 2 (receiver).
+This script acts as a UDP server that sends the `merged_packet.pcapng` file from Laptop 1 (remote) to Laptop 2 (drone).
+
+
+### 5. `Receiver.py`
+
+**Description:**
+The receiver laptop,  with help of receiver.py script, receives the merged_packet.pcapng file which contains hash value and actual command signal which is to be executed on receiving laptop.
+
+
+### 6. `Extract.py`
+
+**Description:**
+This script reads merged_packet.pcapng and extracts the hash value present inside pcapng packet and saves it into new text file `extracted_hash.txt` .
+
+### 7. `Authenticate.py`
+
+**Description:**
+This script plays an important role as it authenticates the packet received.
+It generates the hash value of command signal present inside the packet , and compares this hash with extracted_hash . If it matches , command is executed , else the command is discarded.
