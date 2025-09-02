@@ -23,7 +23,7 @@ The project consists of following Python scripts and files:
 ### 1. `hmac_code.py`
 
 **Description:**  
-This script reads a captured Wi-Fi signal(custom packet containing drone commands, mentioned in step 3) from a `.pcapng` file and generates an HMAC-SHA256 hash value using a pre-shared secret key, and saves the hash into a seperate file `hash_value.txt`
+This script reads a captured Wi-Fi signal(custom packet containing drone commands, mentioned in step 3) from a `.pcapng` file and generates an HMAC-SHA512 hash value using a pre-shared secret key, and saves the hash into a seperate file `hash_value.txt`
 
 
 ### 2. `hash_value.txt`
